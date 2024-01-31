@@ -1,0 +1,120 @@
+
+body {
+	background-color: white;
+}
+
+#container {
+    width: 500px;
+    height: 500px;
+    margin: calc((100vh - 500px)/2) auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #b9b9b9;
+    padding: 15px;
+    border-radius: 23px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+#container form {
+	flex: 1;	
+}
+
+h1 {
+	text-align: center;
+    color: #333;
+    margin: 10px 0 10px 0;
+}
+
+
+
+.containerFlex {
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.ligneFlex {
+    display: flex;
+    justify-content: space-between;    
+    margin: 0 30px;
+}
+
+
+.labelValider, .labelModifier {
+	margin: auto 0;
+}
+
+.inputValider, .inputModifier {    
+    height: 24px;
+    border-radius: 50px;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    width: 65%;
+}
+
+.divBoutonValiderRetour,.divBoutonModifierRetour {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boutonValider, .boutonModifier, .boutonRetour {
+    width: 160px;
+    height: 40px;
+    color: grey;
+    border-radius: 100px;
+    border: 3px solid #ffffff00;
+    background-color: #ffffff00;
+    font-weight: 700;
+    font-size: 18px;
+  	transition: 0.3s;
+    color: #333;    
+}
+
+.boutonValider:hover, .boutonModifier:hover {
+    color: rgb(36 159 0);
+    border: 3px solid rgb(36 159 0);
+}
+
+.boutonRetour:hover {
+    color: grey; 
+    border: 3px solid grey;   
+}
+	
+.topBarre {
+	height: 24px;
+}
+
+#divSeDeconnecter {
+    right: 24px;
+    padding: 3px 24px 3px 10px;
+    
+	position: absolute;
+    top: 13px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 62%);
+}
+
+#divChangerAppareil {
+    left: 24px;
+    padding: 3px 10px 3px 24px;
+    
+	position: absolute;
+    top: 13px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 62%);
+}
+	
+	
+	
+	

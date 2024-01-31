@@ -1,0 +1,76 @@
+
+
+#tableauDAppareils {
+	flex: 1;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+}
+
+#tableauDAppareils table {
+	width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+#tableauDAppareils thead {
+    background-color: #f2f2f2;
+}
+
+#tableauDAppareils th, #tableauDAppareils td {
+    padding: 3px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid transparent;
+    background-color: #f7f7f7;
+}
+
+#tableauDAppareils #nom_ligne {
+	width: 40%;
+}
+
+#tableauDAppareils #numero_ligne {
+	width: 40%;
+}
+
+#tableauDAppareils .btn_ligne {
+	width: 10%;
+    padding: 0px 3px 1px 0px;
+}
+
+#tableauDAppareils .btn_ligne a {
+    text-decoration: none;
+    padding: 2px 4px;
+    font-size: 12px;
+    
+    font-weight: 700;
+    background-color: #ffffff00;
+    border-radius: 100px;
+    color: grey;
+    border: 2px solid #ffffff00;
+  	transition: 0.3s;
+}
+
+#tableauDAppareils .btn_ligne a:hover {
+    color: #333;  
+    border: 2px solid #333;
+}
+
+#tableauDAppareils .form {
+	margin: 0 auto;
+}
+
+#tableauDAppareils a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
