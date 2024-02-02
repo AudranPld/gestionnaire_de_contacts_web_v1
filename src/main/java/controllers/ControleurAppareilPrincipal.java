@@ -1,6 +1,8 @@
 package controllers;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -31,6 +33,16 @@ public class ControleurAppareilPrincipal extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	    Connection maConnection = (Connection) request.getSession().getAttribute("maConnection");
+        if (maConnection == null) {
+    	    try {
+    			Class.forName("com.mysql.cj.jdbc.Driver");
+    			maConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "135246AETZRY");
+    			request.getSession().setAttribute("maConnection", maConnection);
+    		} catch (SQLException | ClassNotFoundException e) {System.out.println("EXEEEPTION");e.printStackTrace();}
+        }
+        
 		Integer  userId = (Integer) request.getSession().getAttribute("userId");
         if (userId == null) {
             this.getServletContext().getRequestDispatcher("/PageUserPrincipale.jsp").forward(request, response);
@@ -39,7 +51,7 @@ public class ControleurAppareilPrincipal extends HttpServlet {
 		
 		GestionnaireAppareil gestionnaireAppareil = (GestionnaireAppareil) request.getSession().getAttribute("gestionnaireAppareil");
         if (gestionnaireAppareil == null) {
-        	gestionnaireAppareil = new GestionnaireAppareil(userId);
+        	gestionnaireAppareil = new GestionnaireAppareil(maConnection,userId);
         	request.getSession().setAttribute("gestionnaireAppareil", gestionnaireAppareil);
         }
 

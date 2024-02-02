@@ -14,7 +14,8 @@ public class GestionnaireContact {
     private Connection maConnection = null;
 	private int userId;
 
-    public GestionnaireContact(int userId) {
+    public GestionnaireContact(Connection maConnection,int userId) {
+    	this.maConnection = maConnection;
         this.userId = userId;
         this.importerLesContacts(); 
     }

@@ -34,15 +34,17 @@ public class ControleurUserPrincipal extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getSession().invalidate();
 		
+	    Connection maConnection = (Connection) request.getSession().getAttribute("maConnection");
+        if (maConnection == null) {
+    	    try {
+    			Class.forName("com.mysql.cj.jdbc.Driver");
+    			maConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "135246AETZRY");
+    			request.getSession().setAttribute("maConnection", maConnection);
+    		} catch (SQLException | ClassNotFoundException e) {System.out.println("EXEEEPTION");e.printStackTrace();}
+        }
+        
 		GestionnaireUser gestionnaireUser = (GestionnaireUser) request.getSession().getAttribute("gestionnaireUser");
         if (gestionnaireUser == null) {
-        	Connection maConnection = null;
-		    try {
-				Class.forName("com.mysql.cj.jdbc.Driver");
-				maConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "135246AETZRY");
-				request.getSession().setAttribute("maConnection", maConnection);
-			} catch (SQLException | ClassNotFoundException e) {System.out.println("EXEEEPTION");e.printStackTrace();}
-			
 		    gestionnaireUser = new GestionnaireUser(maConnection);
         	request.getSession().setAttribute("gestionnaireUser", gestionnaireUser);
         }

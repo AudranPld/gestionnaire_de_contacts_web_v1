@@ -14,7 +14,8 @@ public class GestionnaireAppareil {
     private Connection maConnection = null;
 	private int userId;
 
-    public GestionnaireAppareil(int userId) {
+    public GestionnaireAppareil(Connection maConnection,int userId) {
+    	this.maConnection = maConnection;
         this.userId = userId;
         this.importerLesAppareils(); 
     }
