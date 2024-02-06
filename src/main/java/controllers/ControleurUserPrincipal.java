@@ -32,7 +32,7 @@ public class ControleurUserPrincipal extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getSession().invalidate();
+		//request.getSession().invalidate();
 		
 	    Connection maConnection = (Connection) request.getSession().getAttribute("maConnection");
         if (maConnection == null) {
@@ -51,7 +51,7 @@ public class ControleurUserPrincipal extends HttpServlet {
 
         if (request.getParameter("email") != null) {
 	        if (request.getParameter("id") != null) {
-	        	request.getSession().setAttribute("login","");
+	        	//request.getSession().setAttribute("login","");
 		        String email = request.getParameter("email").toString();
 		        String password = request.getParameter("password").toString();
 		        String id = request.getParameter("id").toString();

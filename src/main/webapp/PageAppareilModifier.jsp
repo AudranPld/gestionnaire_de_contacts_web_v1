@@ -24,24 +24,24 @@
         		<div class="ligneFlex">
 			        <tr>
 			            <td><label for="nom" class="labelModifier">Nom :</label></td>
-			            <td style="text-align: right;"><input type="text" class="inputModifier" name="nom" value="${nom}" onblur="validerString(this)" /></td>
+			            <td style="text-align: right;"><input type="text" class="inputValider" name="nom" value="${nom}" onblur="validerString(this)" /></td>
 			        </tr>
 		        </div>
         		<div class="ligneFlex">
 			        <tr>
 			            <td><label for="hauteur" class="labelModifier">Hauteur :</label></td>
-			            <td style="text-align: right;"><input type="text" class="inputModifier" name="hauteur" value="${hauteur}" onblur="validerInt(this, 380, 630)"/></td>
+			            <td style="text-align: right;"><input type="text" class="inputValider" name="hauteur" value="${hauteur}" onblur="validerInt(this, 380, 630)"/></td>
 			        </tr>
 		        </div>
         		<div class="ligneFlex">
 			        <tr>
 			            <td><label for="largeur" class="labelModifier">Largeur :</label></td>
-			            <td style="text-align: right;"><input type="text" class="inputModifier" name="largeur" value="${largeur}" onblur="validerInt(this, 380, 1200)"/></td>
+			            <td style="text-align: right;"><input type="text" class="inputValider" name="largeur" value="${largeur}" onblur="validerInt(this, 380, 1200)"/></td>
 			            <td><input type="hidden" name="id" value="${id}" /></td>
 			        </tr>
 		        </div>
 			    <div class="divBoutonModifierRetour ligneFlex">
-			        <input type="submit" class="boutonModifier" value="Modifier" />
+			        <input type="submit" class="boutonValider" value="Modifier" />
 			        <input type="button" class="boutonRetour" value="Retour" onclick="window.location.href='PageAppareilPrincipale'" />
 			    </div>
         	</div>

@@ -26,18 +26,18 @@
         		<div class="ligneFlex">
 			        <tr>
 			            <td><label for="nom" class="labelModifier">Nom :</label></td>
-			            <td style="text-align: right;"><input type="text" class="inputModifier" name="nom" value="${nom}" onblur="validerString(this)" /></td>
+			            <td style="text-align: right;"><input type="text" class="inputValider" name="nom" value="${nom}" onblur="validerString(this)" /></td>
 			        </tr>
 		        </div>
         		<div class="ligneFlex">
 			        <tr>
 			            <td><label for="numero" class="labelModifier">Numéro :</label></td>
-			            <td style="text-align: right;"><input type="text" class="inputModifier" name="numero" value="${numero}"/></td>
+			            <td style="text-align: right;"><input type="text" class="inputValider" name="numero" value="${numero}"/></td>
 			            <td><input type="hidden" name="id" value="${id}" /></td>
 			        </tr>
 		        </div>
 			    <div class="divBoutonModifierRetour ligneFlex">
-			        <input type="submit" class="boutonModifier" value="Modifier" />
+			        <input type="submit" class="boutonValider" value="Modifier" />
 			        <input type="button" class="boutonRetour" value="Retour" onclick="window.location.href='PageContactPrincipale'" />
 			    </div>
 			</div>
